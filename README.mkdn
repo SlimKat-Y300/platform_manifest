@@ -1,68 +1,31 @@
-Welcome to SlimRoms
-===================
+SlimKat Manifest for the Huawei Y300,G510,G330
+==============================================
 
+This manifest provides the customised sources for building android SlimKat for the following devices:
+	* Huawei Ascend Y300 (U8833)
+	* Huawei Ascend G510 (U8951)
+	* Huawei Ascend G330 (U8825)
 
-Getting Started
----------------
-
-To get started with SlimKat, you'll need to get familiar with
-[Git and Repo](http://source.android.com/download/using-repo).
-
-Please take note that we have two main line branches depending on
-which hardware base your phone is working.
-
-If you have a qcom powered device which needs CodeAuroraForum (CAF)
-trees please us the kk4.4-caf branch which pulls for the effected packages
-the correct caf version for you.
-
-To initialize your local repository using the SlimKat trees, use this command:
-
-
-for google, exynos and non qcom devices:
-
-	repo init -u git://github.com/SlimRoms/platform_manifest.git -b kk4.4
-
-
-for qcom devices which are using CodeAuroraForum trees:
-
-	repo init -u git://github.com/SlimRoms/platform_manifest.git -b kk4.4-caf
-
-
-
-Then sync up with this command:
-
-	repo sync
-
-
-
-Submitting Patches
+Build Instructions
 ------------------
 
-We're open source, and patches are always welcome!
-You can send patches by using these commands:
+1. Initialize repo using the SlimKat manifest (CAF branch)
+    
+        repo init -u git://github.com/SlimKat-Y300/platform_manifest.git -b kk4.4-caf
 
-    cd <workspace>
-    repo start <branch> SlimRoms/<project>
-    cd <project>
-    git add -A
-    git commit -a
-    cd <workspace>
-    repo upload SlimRoms/<project>
+2. Then sync up the repositories
+ 
+        repo sync
 
-Commit your patches in a single commit.
+3. Initialize the build environment
 
-Squash multiple commit using this command:
+        source build/envsetup.sh
+    
+4. Build the ROM
 
-	git rebase -i HEAD~<# of commits>
-
-If you are going to make extra additions, just repeat steps (Don't repo start again), but instead of
-
-	git commit -a
-
-use
-
-	git commit --amend
-
-Gerrit will recognize it as a new patchset.
-
-To view the status of your and others patches, visit [SlimRoms Code Review](http://gerrit.slimroms.net)
+        For Y300:
+            brunch u8833
+        For G510:
+            brunch u8951
+        For G330:
+            brunch u8825
