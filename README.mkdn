@@ -2,9 +2,10 @@ SlimKat Manifest for the Huawei Y300,G510,G330
 ==============================================
 
 This manifest provides the customised sources for building android SlimKat for the following devices:
-	* Huawei Ascend Y300 (U8833)
-	* Huawei Ascend G510 (U8951)
-	* Huawei Ascend G330 (U8825)
+
+  - Huawei Ascend Y300 (U8833)
+  - Huawei Ascend G510 (U8951)
+  - Huawei Ascend G330 (U8825)
 
 Build Instructions
 ------------------
